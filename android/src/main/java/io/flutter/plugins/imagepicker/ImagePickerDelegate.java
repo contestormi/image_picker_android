@@ -482,9 +482,9 @@ public class ImagePickerDelegate
                                             .build());
         } else {
             pickMultiImageIntent = new Intent(Intent.ACTION_GET_CONTENT);
-            intentChooser = Intent.createChooser(pickMultiImageIntent, "Select a photo");
             pickMultiImageIntent.setType("image/*");
             pickMultiImageIntent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+            intentChooser = Intent.createChooser(pickMultiImageIntent, "Select a photo");
         }
         if (intentChooser != null) {
             this.activity.startActivityForResult(intentChooser, REQUEST_CODE_CHOOSE_MULTI_IMAGE_FROM_GALLERY);
