@@ -481,7 +481,7 @@ public class ImagePickerDelegate
                                             .setMediaType(ActivityResultContracts.PickVisualMedia.ImageOnly.INSTANCE)
                                             .build());
         } else {
-            pickMultiImageIntent = new Intent(Intent.ACTION_GET_CONTENT);
+            pickMultiImageIntent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
             pickMultiImageIntent.setType("image/*");
             pickMultiImageIntent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
             intentChooser = Intent.createChooser(pickMultiImageIntent, "Select a photo");
